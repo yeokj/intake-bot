@@ -27,3 +27,5 @@ frontend/build/
 Thumbs.db
 .vscode/
 .idea/
+
+data/
