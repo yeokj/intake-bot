@@ -18,6 +18,21 @@ class Settings(BaseSettings):
     PORT: int = 8000
     HOST: str = "0.0.0.0"
 
+    # Delivery Settings
+    DELIVERY_CHANNELS: str = "local"  # e.g., "local", "airtable", "email", or "local,airtable"
+
+    # Airtable Configuration
+    AIRTABLE_API_KEY: str = ""
+    AIRTABLE_BASE_ID: str = ""
+    AIRTABLE_TABLE_NAME: str = "Intake Submissions"
+
+    # Email / SMTP Configuration
+    SMTP_SERVER: str = ""
+    SMTP_PORT: int = 587
+    SMTP_USERNAME: str = ""
+    SMTP_PASSWORD: str = ""
+    STAFF_NOTIFICATION_EMAIL: str = "staff@techincubatorqc.com"
+
     # Load from .env if present
     model_config = SettingsConfigDict(
         env_file=(".env", "../.env"),
